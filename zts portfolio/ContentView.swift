@@ -19,7 +19,7 @@ struct ContentView: View {
             ProjectsView(showClosedProjects: false)
                 .tabItem {
                     Image(systemName: "list.bullet")
-                    Text("Open projects")
+                    Text("Open")
                 }
             
             ProjectsView(showClosedProjects: true)
