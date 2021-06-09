@@ -17,6 +17,7 @@
 		2C3D72C12670212900001AFB /* ItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3D72C02670212900001AFB /* ItemRowView.swift */; };
 		2C535CCA265C3C0100E79C74 /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2C535CC8265C3C0100E79C74 /* Main.xcdatamodeld */; };
 		2C535CCC265C3E7B00E79C74 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C535CCB265C3E7B00E79C74 /* DataController.swift */; };
+		2CD6587026715689009CB06D /* Binding-OnChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6586F26715689009CB06D /* Binding-OnChange.swift */; };
 		2CFD20E526682B7B009E68DF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFD20E426682B7B009E68DF /* HomeView.swift */; };
 		2CFD20E926682FE3009E68DF /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFD20E826682FE3009E68DF /* ProjectsView.swift */; };
 /* End PBXBuildFile section */
@@ -34,6 +35,7 @@
 		2C3D72C02670212900001AFB /* ItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRowView.swift; sourceTree = "<group>"; };
 		2C535CC9265C3C0100E79C74 /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
 		2C535CCB265C3E7B00E79C74 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		2CD6586F26715689009CB06D /* Binding-OnChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding-OnChange.swift"; sourceTree = "<group>"; };
 		2CFD20E426682B7B009E68DF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		2CFD20E826682FE3009E68DF /* ProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,12 +72,13 @@
 			children = (
 				2C3470B8265AE9D6001B12BB /* zts_portfolioApp.swift */,
 				2C3470BA265AE9D6001B12BB /* ContentView.swift */,
-				2C3D72BE2670180700001AFB /* EditItemView.swift */,
 				2CFD20E426682B7B009E68DF /* HomeView.swift */,
 				2CFD20E826682FE3009E68DF /* ProjectsView.swift */,
 				2C3D72C02670212900001AFB /* ItemRowView.swift */,
+				2C3D72BE2670180700001AFB /* EditItemView.swift */,
 				2C1953A2266AD6D900AEDB93 /* Items-CoreDataHelpers.swift */,
 				2C1953A4266AD89500AEDB93 /* Project-CoreDataHelpers.swift */,
+				2CD6586F26715689009CB06D /* Binding-OnChange.swift */,
 				2C3470BC265AE9D7001B12BB /* Assets.xcassets */,
 				2C3470C1265AE9D7001B12BB /* Info.plist */,
 				2C3470BE265AE9D7001B12BB /* Preview Content */,
@@ -168,6 +171,7 @@
 				2C535CCC265C3E7B00E79C74 /* DataController.swift in Sources */,
 				2C3D72C12670212900001AFB /* ItemRowView.swift in Sources */,
 				2C3470BB265AE9D6001B12BB /* ContentView.swift in Sources */,
+				2CD6587026715689009CB06D /* Binding-OnChange.swift in Sources */,
 				2C1953A3266AD6D900AEDB93 /* Items-CoreDataHelpers.swift in Sources */,
 				2CFD20E526682B7B009E68DF /* HomeView.swift in Sources */,
 				2C3470B9265AE9D6001B12BB /* zts_portfolioApp.swift in Sources */,
