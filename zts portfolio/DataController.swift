@@ -67,11 +67,12 @@ class DataController: ObservableObject {
         if container.viewContext.hasChanges {
             try? container.viewContext.save()
         }
-        
-        func delete(_ object: NSManagedObject) {
-            container.viewContext.delete(object)
-        }
     }
+    
+    func delete(_ object: NSManagedObject) {
+        container.viewContext.delete(object)
+    }
+    
     func deleteAll() {
         let fetchRequest1: NSFetchRequest<NSFetchRequestResult> = Item.fetchRequest()
         let batchDeleteRequest1 = NSBatchDeleteRequest(fetchRequest: fetchRequest1)
