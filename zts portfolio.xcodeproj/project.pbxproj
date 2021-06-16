@@ -26,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C0DFB3D267528BA0020E703 /* zts portfolio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "zts portfolio.entitlements"; sourceTree = "<group>"; };
 		2C1953A2266AD6D900AEDB93 /* Items-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Items-CoreDataHelpers.swift"; sourceTree = "<group>"; };
 		2C1953A4266AD89500AEDB93 /* Project-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project-CoreDataHelpers.swift"; sourceTree = "<group>"; };
 		2C3470B5265AE9D6001B12BB /* zts portfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "zts portfolio.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +77,7 @@
 		2C3470B7265AE9D6001B12BB /* zts portfolio */ = {
 			isa = PBXGroup;
 			children = (
+				2C0DFB3D267528BA0020E703 /* zts portfolio.entitlements */,
 				2C3470B8265AE9D6001B12BB /* zts_portfolioApp.swift */,
 				2C3470BA265AE9D6001B12BB /* ContentView.swift */,
 				2CFD20E426682B7B009E68DF /* HomeView.swift */,
@@ -315,6 +317,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "zts portfolio/zts portfolio.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"zts portfolio/Preview Content\"";
 				DEVELOPMENT_TEAM = NN22X3ZRTV;
@@ -337,6 +340,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "zts portfolio/zts portfolio.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"zts portfolio/Preview Content\"";
 				DEVELOPMENT_TEAM = NN22X3ZRTV;
