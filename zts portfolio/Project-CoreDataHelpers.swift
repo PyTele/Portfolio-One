@@ -23,9 +23,12 @@ extension Project {
     }
     
     var projectItems: [Item] {
-        let itemsArray = items?.allObjects as? [Item] ?? []
+        items?.allObjects as? [Item] ?? []
+    }
+    
+    var projectItemsDefaultSorted: [Item] {
         
-        return itemsArray.sorted { first, second in
+        projectItems.sorted { first, second in
             if first.completion == false {
                 if second.completion == true {
                     return true
@@ -66,5 +69,4 @@ extension Project {
         
         return project
     }
-    
 }
