@@ -16,13 +16,6 @@ struct ProjectsView: View {
     
     @State private var showingSortOrder = false
     @State private var sortOrder = Item.SortOrder.optimized
-    @State private var sortingKeyPath: PartialKeyPath<Item>?
-    @State private var sortDescriptor: NSSortDescriptor?
-    
-    let sortingKeyPaths = [
-        \Item.itemTitle,
-        \Item.itemCreationDate
-    ]
     
     let showClosedProjects: Bool
     
@@ -42,16 +35,17 @@ struct ProjectsView: View {
             List {
                 ForEach(projects.wrappedValue) { project in
                     Section(header: ProjectHeaderView(project: project)) {
-                        ForEach(items(for: project)) { item in
+                        ForEach(project.projectItems(using: sortOrder)) { item in
                             ItemRowView(item: item)
                         }
                         .onDelete { offsets in
                             let allItems = project.projectItems
-                            
+
                             for offset in offsets {
                                 let item = allItems[offset]
                                 dataController.delete(item)
                             }
+
                             dataController.save()
                         }
                         
@@ -106,14 +100,6 @@ struct ProjectsView: View {
                 )
             }
         }
-    }
-    
-    func items(for project: Project) -> [Item] {
-        guard let sortingKeyPath = sortingKeyPath else {
-            return project.projectItemsDefaultSorted
-        }
-
-        return project.projectItems.sorted(by: sortingKeyPath)
     }
 }
 
