@@ -70,7 +70,7 @@ extension Project {
         return project
     }
     
-    func projectItems(using sortOrder: Item.SortOrder) -> [Item] {
+    func projectItemsSort(using sortOrder: Item.SortOrder) -> [Item] {
         switch sortOrder {
         case .title:
             return projectItems.sorted(by: \Item.itemTitle)
