@@ -12,7 +12,7 @@ struct ItemRowView: View {
     @ObservedObject var item: Item
     
     var icon: some View {
-        if item.completion {
+        if item.complete {
             return Image(systemName: "checkmark.circle")
                 .foregroundColor(Color(project.projectColor))
         } else if item.priority == 3 {

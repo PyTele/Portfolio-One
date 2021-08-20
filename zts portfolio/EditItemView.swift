@@ -23,7 +23,7 @@ struct EditItemView: View {
         _title = State(wrappedValue: item.itemTitle)
         _detail = State(wrappedValue: item.itemDetail)
         _priority = State(wrappedValue: Int(item.priority))
-        _completed = State(wrappedValue: item.completion)
+        _completed = State(wrappedValue: item.complete)
     }
     var body: some View {
         Form {
@@ -57,7 +57,7 @@ struct EditItemView: View {
         item.title = title
         item.detail = detail
         item.priority = Int16(priority)
-        item.completion = completed
+        item.complete = completed
     }
 }
 

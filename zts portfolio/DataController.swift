@@ -52,7 +52,7 @@ class DataController: ObservableObject {
                 let item = Item(context: viewContext)
                 item.title = "Item \(j)"
                 item.creationDate = Date()
-                item.completion = Bool.random()
+                item.complete = Bool.random()
                 item.project = project
                 item.priority = Int16.random(in: 1...3)
             }

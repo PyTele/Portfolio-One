@@ -29,12 +29,12 @@ extension Project {
     var projectItemsDefaultSorted: [Item] {
         
         projectItems.sorted { first, second in
-            if first.completion == false {
-                if second.completion == true {
+            if first.complete == false {
+                if second.complete == true {
                     return true
                 }
-            } else if first.completion == true {
-               if second.completion == false {
+            } else if first.complete == true {
+               if second.complete == false {
                     return false
                 }
             }
@@ -53,7 +53,7 @@ extension Project {
         let originalItems = items?.allObjects as? [Item] ?? []
         guard originalItems.isEmpty == false else { return 0 }
         
-        let completedItems = originalItems.filter(\.completion)
+        let completedItems = originalItems.filter(\.complete)
         return Double(completedItems.count) / Double(originalItems.count)
     }
     
