@@ -14,10 +14,16 @@ struct ItemRowView: View {
     var icon: some View {
         if item.complete {
             return Image(systemName: "checkmark.circle")
-                .foregroundColor(Color(project.projectColor))
+                .foregroundColor(Color.green)
         } else if item.priority == 3 {
-            return Image(systemName: "exclaimationmark.triangle")
-                .foregroundColor(Color(project.projectColor))
+            return Image(systemName: "exclamationmark.octagon.fill")
+                .foregroundColor(Color.red)
+        } else if item.priority == 2 {
+            return Image(systemName: "exclamationmark.triangle.fill")
+                .foregroundColor(Color.yellow)
+        } else if item.priority == 1 {
+            return Image(systemName: "exclamationmark.circle.fill")
+                .foregroundColor(Color.green)
         } else {
             return Image(systemName: "checkmark.circle")
                 .foregroundColor(.clear)
