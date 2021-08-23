@@ -27,7 +27,7 @@ struct EditItemView: View {
     }
     var body: some View {
         Form {
-            Section(header: Text("Basic Settings")) {
+            Section(header: Text("Basic settings")) {
                 TextField("Item Name", text: $title.onChange(update))
                 TextField("Item Description", text: $detail.onChange(update))
             }
@@ -42,7 +42,7 @@ struct EditItemView: View {
             }
             
             Section {
-                Toggle("Mark completed", isOn: $completed.onChange(update))
+                Toggle("Mark Completed", isOn: $completed.onChange(update))
             }
         }
         .navigationTitle("Edit Item")

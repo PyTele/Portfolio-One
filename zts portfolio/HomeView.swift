@@ -65,28 +65,30 @@ struct HomeView: View {
                 VStack(alignment: .leading) {
                     list("Up next", for: items.wrappedValue.prefix(3))
                     list("More to explore", for: items.wrappedValue.dropFirst(3))
+                    
+                            Button {
+                                dataController.deleteAll()
+                                try? dataController.createSampleData()
+                            } label: {
+                                ZStack {
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .foregroundColor(Color.secondarySystemGroupedBackground)
+                                    
+                                    Text("Add Data")
+                                }
+                            }
+                            
+                    .frame(maxWidth: .infinity, minHeight: 44)
+                    .padding(.bottom)
                 }
                 .padding(.horizontal)
-                ZStack {
-                    RoundedRectangle(cornerRadius: 10)
-                        .foregroundColor(Color.secondarySystemGroupedBackground)
-                    
-                    VStack {
-                        Button("Add data") {
-                            dataController.deleteAll()
-                            try? dataController.createSampleData()
-                        }
-                    }
-                }
-                .frame(maxWidth: .infinity, minHeight: 50)
-                .padding()
             }
             .background(Color.systemGroupedBackground.ignoresSafeArea())
             .navigationTitle("Home")
         }
     }
     
-    @ViewBuilder func list(_ title: String, for items: FetchedResults<Item>.SubSequence) -> some View {
+    @ViewBuilder func list(_ title: LocalizedStringKey, for items: FetchedResults<Item>.SubSequence) -> some View {
         if items.isEmpty {
             EmptyView()
         } else {

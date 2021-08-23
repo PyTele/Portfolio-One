@@ -60,16 +60,15 @@ struct EditProjectView: View {
                     }
                 }
                 .padding(.vertical)
-                    ZStack {
+                    VStack {
                         
                         Text("\(color)")
                             .foregroundColor(.secondary)
                             .opacity(1.2)
-                            .padding(.bottom)
                         
                         ProgressView(value: Double.random(in: 0.25...1))
                             .accentColor(Color(project.projectColor))
-                            .padding(.top)
+                            .padding(.vertical)
                     }
                 }
             }
