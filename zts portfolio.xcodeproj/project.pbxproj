@@ -27,6 +27,8 @@
 		2C7B766B2672BF2800973115 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C7B766A2672BF2800973115 /* Colors.xcassets */; };
 		2C7B766D2673DF8E00973115 /* EditProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7B766C2673DF8E00973115 /* EditProjectView.swift */; };
 		2C81994D267BF288005A876C /* SequenceSorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C81994C267BF288005A876C /* SequenceSorting.swift */; };
+		2C90BC3226D97297005DA3A9 /* ItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C90BC3126D97297005DA3A9 /* ItemListView.swift */; };
+		2C90BC3426D97397005DA3A9 /* ProjectSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C90BC3326D97397005DA3A9 /* ProjectSummaryView.swift */; };
 		2C9F975226A62354000CB5BF /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9F975126A62354000CB5BF /* Award.swift */; };
 		2CAA4A2B26910A710049D61A /* SelectSomthingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAA4A2A26910A710049D61A /* SelectSomthingView.swift */; };
 		2CB2E11E2693B5CC00F7BB1A /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB2E11D2693B5CC00F7BB1A /* Bundle-Decodable.swift */; };
@@ -61,6 +63,8 @@
 		2C7B766A2672BF2800973115 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		2C7B766C2673DF8E00973115 /* EditProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProjectView.swift; sourceTree = "<group>"; };
 		2C81994C267BF288005A876C /* SequenceSorting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceSorting.swift; sourceTree = "<group>"; };
+		2C90BC3126D97297005DA3A9 /* ItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListView.swift; sourceTree = "<group>"; };
+		2C90BC3326D97397005DA3A9 /* ProjectSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSummaryView.swift; sourceTree = "<group>"; };
 		2C9F975126A62354000CB5BF /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
 		2CAA4A2A26910A710049D61A /* SelectSomthingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSomthingView.swift; sourceTree = "<group>"; };
 		2CB2E11D2693B5CC00F7BB1A /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
@@ -110,9 +114,11 @@
 				2C0DFB3D267528BA0020E703 /* zts portfolio.entitlements */,
 				2C3470B8265AE9D6001B12BB /* zts_portfolioApp.swift */,
 				2C3470BA265AE9D6001B12BB /* ContentView.swift */,
-				2C068F0026D018ED000A684D /* HomeView.swift */,
-				2CFD20E826682FE3009E68DF /* ProjectsView.swift */,
 				2CAA4A2A26910A710049D61A /* SelectSomthingView.swift */,
+				2C068F0026D018ED000A684D /* HomeView.swift */,
+				2C90BC3326D97397005DA3A9 /* ProjectSummaryView.swift */,
+				2CFD20E826682FE3009E68DF /* ProjectsView.swift */,
+				2C90BC3126D97297005DA3A9 /* ItemListView.swift */,
 				2C3D72C02670212900001AFB /* ItemRowView.swift */,
 				2C3D72BE2670180700001AFB /* EditItemView.swift */,
 				2C7B76682672BA4100973115 /* ProjectHeaderView.swift */,
@@ -220,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CFD20E926682FE3009E68DF /* ProjectsView.swift in Sources */,
+				2C90BC3426D97397005DA3A9 /* ProjectSummaryView.swift in Sources */,
 				2CAA4A2B26910A710049D61A /* SelectSomthingView.swift in Sources */,
 				2C6B355F26D0126900B76AB1 /* AwardsView.swift in Sources */,
 				2C7B76692672BA4100973115 /* ProjectHeaderView.swift in Sources */,
@@ -234,6 +241,7 @@
 				2CD6587026715689009CB06D /* Binding-OnChange.swift in Sources */,
 				2C81994D267BF288005A876C /* SequenceSorting.swift in Sources */,
 				2CB2E11E2693B5CC00F7BB1A /* Bundle-Decodable.swift in Sources */,
+				2C90BC3226D97297005DA3A9 /* ItemListView.swift in Sources */,
 				2C1953A3266AD6D900AEDB93 /* Items-CoreDataHelpers.swift in Sources */,
 				2C3470B9265AE9D6001B12BB /* zts_portfolioApp.swift in Sources */,
 				2C3D72BF2670180700001AFB /* EditItemView.swift in Sources */,
