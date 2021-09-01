@@ -18,7 +18,12 @@ struct HomeView: View {
     
     init() {
         let request: NSFetchRequest<Item> = Item.fetchRequest()
-        request.predicate = NSPredicate(format: "complete = false")
+        
+        let completedPredicate = NSPredicate(format: "complete = false")
+        let openPredicate = NSPredicate(format: "project.closed = false")
+        let compoundPredicate = NSCompoundPredicate(type: .and, subpredicates: [completedPredicate, openPredicate])
+        
+        request.predicate = compoundPredicate
 
         request.sortDescriptors = [
             NSSortDescriptor(keyPath: \Item.priority, ascending: false)
@@ -57,6 +62,7 @@ struct HomeView: View {
                                 ZStack {
                                     RoundedRectangle(cornerRadius: 10)
                                         .foregroundColor(Color.secondarySystemGroupedBackground)
+                                        .shadow(color: Color.black.opacity(0.2), radius: 5)
                                     
                                     Text("Add Data")
                                 }
