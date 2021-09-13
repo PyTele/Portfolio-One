@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct ItemListView: View {
-    
+
     let title: LocalizedStringKey
     let items: FetchedResults<Item>.SubSequence
-    
+
     var body: some View {
         if items.isEmpty {
             EmptyView()
@@ -51,8 +51,8 @@ struct ItemListView: View {
     }
 }
 
-//struct ItemListView_Previews: PreviewProvider {
+// struct ItemListView_Previews: PreviewProvider {
 //    static var previews: some View {
 //        ItemListView()
 //    }
-//}
+// }
