@@ -161,7 +161,7 @@
 				2C3470B1265AE9D6001B12BB /* Sources */,
 				2C3470B2265AE9D6001B12BB /* Frameworks */,
 				2C3470B3265AE9D6001B12BB /* Resources */,
-				2C007FDE26EFD71800DD4EAD /* ShellScript */,
+				2C007FDE26EFD71800DD4EAD /* swiftlint */,
 			);
 			buildRules = (
 			);
@@ -222,7 +222,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2C007FDE26EFD71800DD4EAD /* ShellScript */ = {
+		2C007FDE26EFD71800DD4EAD /* swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -231,6 +231,7 @@
 			);
 			inputPaths = (
 			);
+			name = swiftlint;
 			outputFileListPaths = (
 			);
 			outputPaths = (

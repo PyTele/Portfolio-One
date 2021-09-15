@@ -8,12 +8,23 @@
 import CoreData
 import SwiftUI
 
+/// An environment created specifically to preform intensive, consistent or background data management tasks;
+/// i.e. User award statuses and save data solutions.
 class DataController: ObservableObject {
+    /// This is the secure CloudKit storage location, used for user added materials along with encrypted user data.
     let container: NSPersistentCloudKitContainer
 
+    /// Initialises  a data controller, either in memory ( for testing and previewing )
+    ///  or from permanent storage ( for public Alpha/Beta/Release ).
+    ///
+    ///  This defaults to permanents storage when available.
+    /// - Parameter inMemory: Whether to store this data in temporary or permanent storage
     init(inMemory: Bool = false) {
         container = NSPersistentCloudKitContainer(name: "Main")
 
+// For testing and previewing purposes, we create a temporary,
+// in-memory database by writing to /dev/null so the data is
+// destroyed after the app is finishes running.
         if inMemory {
             container.persistentStoreDescriptions.first?.url = URL(fileURLWithPath: "/dev/null")
         }
@@ -38,6 +49,9 @@ class DataController: ObservableObject {
         return dataController
     }()
 
+    
+    /// Used to add sample data for testing and debugging purposes.
+    /// - Throws: An NSError sent from calling save() on the NSManagedObjectContext.
     func createSampleData() throws {
         let viewContext = container.viewContext
 
@@ -62,6 +76,9 @@ class DataController: ObservableObject {
 
     }
 
+    /// Saves our Core Data context iff there are any changes. This silently ignores
+    /// any errors caused by saving, but this should be fine because our attributes
+    /// are optional.
     func save() {
         if container.viewContext.hasChanges {
             try? container.viewContext.save()
@@ -90,18 +107,21 @@ class DataController: ObservableObject {
     func hasEarned(award: Award) -> Bool {
         switch award.criterion {
         case "items":
+//          returns true if they added a certain about of items
             let fetchRequest: NSFetchRequest<Item> = NSFetchRequest(entityName: "Item")
             let awardCount = count(for: fetchRequest)
             return awardCount >= award.value
 
         case "complete":
+//            returns true if they completed a certain number of items
             let fetchRequest: NSFetchRequest<Item> = NSFetchRequest(entityName: "Item")
             fetchRequest.predicate = NSPredicate(format: "complete = true")
             let awardCount = count(for: fetchRequest)
             return awardCount >= award.value
 
         default:
-            // fatalError("Unknown award criterion \(award.criterion).")
+//            unknown award criterion; this should never be triggered
+//            fatalError("Unknown award criterion \(award.criterion).")
             return false
         }
     }
