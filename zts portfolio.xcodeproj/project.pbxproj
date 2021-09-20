@@ -111,34 +111,16 @@
 		2C3470B7265AE9D6001B12BB /* zts portfolio */ = {
 			isa = PBXGroup;
 			children = (
-				2C0DFB3D267528BA0020E703 /* zts portfolio.entitlements */,
 				2C3470B8265AE9D6001B12BB /* zts_portfolioApp.swift */,
-				2C3470BA265AE9D6001B12BB /* ContentView.swift */,
-				2CAA4A2A26910A710049D61A /* SelectSomthingView.swift */,
-				2C068F0026D018ED000A684D /* HomeView.swift */,
-				2C90BC3326D97397005DA3A9 /* ProjectSummaryView.swift */,
-				2CFD20E826682FE3009E68DF /* ProjectsView.swift */,
-				2C90BC3126D97297005DA3A9 /* ItemListView.swift */,
-				2C3D72C02670212900001AFB /* ItemRowView.swift */,
-				2C3D72BE2670180700001AFB /* EditItemView.swift */,
-				2C7B76682672BA4100973115 /* ProjectHeaderView.swift */,
-				2C7B766C2673DF8E00973115 /* EditProjectView.swift */,
-				2C81994C267BF288005A876C /* SequenceSorting.swift */,
-				2C1953A2266AD6D900AEDB93 /* Items-CoreDataHelpers.swift */,
-				2C1953A4266AD89500AEDB93 /* Project-CoreDataHelpers.swift */,
-				2CD6586F26715689009CB06D /* Binding-OnChange.swift */,
 				2C535CCB265C3E7B00E79C74 /* DataController.swift */,
-				2CB2E11D2693B5CC00F7BB1A /* Bundle-Decodable.swift */,
-				2C9F975126A62354000CB5BF /* Award.swift */,
-				2C6B355E26D0126800B76AB1 /* AwardsView.swift */,
-				2C7A934726D444C300BC54F7 /* Awards.json */,
+				2C3470BA265AE9D6001B12BB /* ContentView.swift */,
+				2C4F9EBB26F91462003671E3 /* Configuration */,
+				2C4F9EBC26F91846003671E3 /* Tabs */,
+				2C4F9EB826F91429003671E3 /* Extension */,
 				2C1ECD8826D44242006F2CC6 /* Localisations */,
 				2C3470BC265AE9D7001B12BB /* Assets.xcassets */,
-				2C6B356026D0127100B76AB1 /* Color-Additions.swift */,
 				2C7B766A2672BF2800973115 /* Colors.xcassets */,
-				2C3470C1265AE9D7001B12BB /* Info.plist */,
 				2C3470BE265AE9D7001B12BB /* Preview Content */,
-				2C535CC8265C3C0100E79C74 /* Main.xcdatamodeld */,
 			);
 			path = "zts portfolio";
 			sourceTree = "<group>";
@@ -149,6 +131,80 @@
 				2C3470BF265AE9D7001B12BB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2C4F9EB826F91429003671E3 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2C4F9EC126F919D2003671E3 /* Models */,
+				2C81994C267BF288005A876C /* SequenceSorting.swift */,
+				2CD6586F26715689009CB06D /* Binding-OnChange.swift */,
+				2CB2E11D2693B5CC00F7BB1A /* Bundle-Decodable.swift */,
+				2C6B356026D0127100B76AB1 /* Color-Additions.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		2C4F9EBB26F91462003671E3 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				2C0DFB3D267528BA0020E703 /* zts portfolio.entitlements */,
+				2C535CC8265C3C0100E79C74 /* Main.xcdatamodeld */,
+				2C3470C1265AE9D7001B12BB /* Info.plist */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		2C4F9EBC26F91846003671E3 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				2C4F9EBD26F91850003671E3 /* Home */,
+				2C4F9EBF26F91860003671E3 /* Projects */,
+				2C4F9EC026F91869003671E3 /* Awards */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		2C4F9EBD26F91850003671E3 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2C068F0026D018ED000A684D /* HomeView.swift */,
+				2C90BC3126D97297005DA3A9 /* ItemListView.swift */,
+				2C90BC3326D97397005DA3A9 /* ProjectSummaryView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2C4F9EBF26F91860003671E3 /* Projects */ = {
+			isa = PBXGroup;
+			children = (
+				2CFD20E826682FE3009E68DF /* ProjectsView.swift */,
+				2CAA4A2A26910A710049D61A /* SelectSomthingView.swift */,
+				2C7B76682672BA4100973115 /* ProjectHeaderView.swift */,
+				2C3D72C02670212900001AFB /* ItemRowView.swift */,
+				2C7B766C2673DF8E00973115 /* EditProjectView.swift */,
+				2C3D72BE2670180700001AFB /* EditItemView.swift */,
+			);
+			path = Projects;
+			sourceTree = "<group>";
+		};
+		2C4F9EC026F91869003671E3 /* Awards */ = {
+			isa = PBXGroup;
+			children = (
+				2C6B355E26D0126800B76AB1 /* AwardsView.swift */,
+				2C9F975126A62354000CB5BF /* Award.swift */,
+				2C7A934726D444C300BC54F7 /* Awards.json */,
+			);
+			path = Awards;
+			sourceTree = "<group>";
+		};
+		2C4F9EC126F919D2003671E3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2C1953A2266AD6D900AEDB93 /* Items-CoreDataHelpers.swift */,
+				2C1953A4266AD89500AEDB93 /* Project-CoreDataHelpers.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -427,12 +483,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "zts portfolio/zts portfolio.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "zts portfolio/Configuration/zts portfolio.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"zts portfolio/Preview Content\"";
 				DEVELOPMENT_TEAM = NN22X3ZRTV;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "zts portfolio/Info.plist";
+				INFOPLIST_FILE = "zts portfolio/Configuration/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -450,12 +506,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "zts portfolio/zts portfolio.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "zts portfolio/Configuration/zts portfolio.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"zts portfolio/Preview Content\"";
 				DEVELOPMENT_TEAM = NN22X3ZRTV;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "zts portfolio/Info.plist";
+				INFOPLIST_FILE = "zts portfolio/Configuration/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

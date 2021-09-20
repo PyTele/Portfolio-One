@@ -49,7 +49,6 @@ class DataController: ObservableObject {
         return dataController
     }()
 
-    
     /// Used to add sample data for testing and debugging purposes.
     /// - Throws: An NSError sent from calling save() on the NSManagedObjectContext.
     func createSampleData() throws {
