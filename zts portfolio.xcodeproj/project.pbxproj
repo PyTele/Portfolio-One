@@ -33,8 +33,20 @@
 		2CAA4A2B26910A710049D61A /* SelectSomthingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAA4A2A26910A710049D61A /* SelectSomthingView.swift */; };
 		2CB2E11E2693B5CC00F7BB1A /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB2E11D2693B5CC00F7BB1A /* Bundle-Decodable.swift */; };
 		2CD6587026715689009CB06D /* Binding-OnChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6586F26715689009CB06D /* Binding-OnChange.swift */; };
+		2CF205BC26FA560F0079C72F /* zts_portfolioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF205BB26FA560F0079C72F /* zts_portfolioTests.swift */; };
+		2CF205C426FA579D0079C72F /* AssetTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF205C326FA579D0079C72F /* AssetTest.swift */; };
 		2CFD20E926682FE3009E68DF /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFD20E826682FE3009E68DF /* ProjectsView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2CF205BE26FA560F0079C72F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C3470AD265AE9D6001B12BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C3470B4265AE9D6001B12BB;
+			remoteInfo = "zts portfolio";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2C068F0026D018ED000A684D /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -69,11 +81,22 @@
 		2CAA4A2A26910A710049D61A /* SelectSomthingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSomthingView.swift; sourceTree = "<group>"; };
 		2CB2E11D2693B5CC00F7BB1A /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 		2CD6586F26715689009CB06D /* Binding-OnChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding-OnChange.swift"; sourceTree = "<group>"; };
+		2CF205B926FA560F0079C72F /* zts portfolioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "zts portfolioTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CF205BB26FA560F0079C72F /* zts_portfolioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zts_portfolioTests.swift; sourceTree = "<group>"; };
+		2CF205BD26FA560F0079C72F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CF205C326FA579D0079C72F /* AssetTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetTest.swift; sourceTree = "<group>"; };
 		2CFD20E826682FE3009E68DF /* ProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		2C3470B2265AE9D6001B12BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CF205B626FA560F0079C72F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -96,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				2C3470B7265AE9D6001B12BB /* zts portfolio */,
+				2CF205BA26FA560F0079C72F /* zts portfolioTests */,
 				2C3470B6265AE9D6001B12BB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -104,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				2C3470B5265AE9D6001B12BB /* zts portfolio.app */,
+				2CF205B926FA560F0079C72F /* zts portfolioTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -207,6 +232,16 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		2CF205BA26FA560F0079C72F /* zts portfolioTests */ = {
+			isa = PBXGroup;
+			children = (
+				2CF205BB26FA560F0079C72F /* zts_portfolioTests.swift */,
+				2CF205C326FA579D0079C72F /* AssetTest.swift */,
+				2CF205BD26FA560F0079C72F /* Info.plist */,
+			);
+			path = "zts portfolioTests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -228,6 +263,24 @@
 			productReference = 2C3470B5265AE9D6001B12BB /* zts portfolio.app */;
 			productType = "com.apple.product-type.application";
 		};
+		2CF205B826FA560F0079C72F /* zts portfolioTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CF205C226FA560F0079C72F /* Build configuration list for PBXNativeTarget "zts portfolioTests" */;
+			buildPhases = (
+				2CF205B526FA560F0079C72F /* Sources */,
+				2CF205B626FA560F0079C72F /* Frameworks */,
+				2CF205B726FA560F0079C72F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2CF205BF26FA560F0079C72F /* PBXTargetDependency */,
+			);
+			name = "zts portfolioTests";
+			productName = "zts portfolioTests";
+			productReference = 2CF205B926FA560F0079C72F /* zts portfolioTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -239,6 +292,10 @@
 				TargetAttributes = {
 					2C3470B4265AE9D6001B12BB = {
 						CreatedOnToolsVersion = 12.5;
+					};
+					2CF205B826FA560F0079C72F = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 2C3470B4265AE9D6001B12BB;
 					};
 				};
 			};
@@ -257,6 +314,7 @@
 			projectRoot = "";
 			targets = (
 				2C3470B4265AE9D6001B12BB /* zts portfolio */,
+				2CF205B826FA560F0079C72F /* zts portfolioTests */,
 			);
 		};
 /* End PBXProject section */
@@ -272,6 +330,13 @@
 				2C3470C0265AE9D7001B12BB /* Preview Assets.xcassets in Resources */,
 				2C3470BD265AE9D7001B12BB /* Assets.xcassets in Resources */,
 				2C1ECD8426D4421F006F2CC6 /* Localizable.stringsdict in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CF205B726FA560F0079C72F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,7 +392,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2CF205B526FA560F0079C72F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CF205C426FA579D0079C72F /* AssetTest.swift in Sources */,
+				2CF205BC26FA560F0079C72F /* zts_portfolioTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2CF205BF26FA560F0079C72F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2C3470B4265AE9D6001B12BB /* zts portfolio */;
+			targetProxy = 2CF205BE26FA560F0079C72F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		2C1ECD8226D441DF006F2CC6 /* Localizable.strings */ = {
@@ -524,6 +606,48 @@
 			};
 			name = Release;
 		};
+		2CF205C026FA560F0079C72F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NN22X3ZRTV;
+				INFOPLIST_FILE = "zts portfolioTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.thefirstprinciple.zts-portfolioTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/zts portfolio.app/zts portfolio";
+			};
+			name = Debug;
+		};
+		2CF205C126FA560F0079C72F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NN22X3ZRTV;
+				INFOPLIST_FILE = "zts portfolioTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.thefirstprinciple.zts-portfolioTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/zts portfolio.app/zts portfolio";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -541,6 +665,15 @@
 			buildConfigurations = (
 				2C3470C5265AE9D7001B12BB /* Debug */,
 				2C3470C6265AE9D7001B12BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2CF205C226FA560F0079C72F /* Build configuration list for PBXNativeTarget "zts portfolioTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CF205C026FA560F0079C72F /* Debug */,
+				2CF205C126FA560F0079C72F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
