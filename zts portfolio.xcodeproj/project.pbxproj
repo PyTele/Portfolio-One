@@ -22,6 +22,7 @@
 		2C535CCC265C3E7B00E79C74 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C535CCB265C3E7B00E79C74 /* DataController.swift */; };
 		2C6B355F26D0126900B76AB1 /* AwardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6B355E26D0126800B76AB1 /* AwardsView.swift */; };
 		2C6B356126D0127100B76AB1 /* Color-Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6B356026D0127100B76AB1 /* Color-Additions.swift */; };
+		2C74835426FBAF1500749E7E /* AwardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C74835326FBAF1500749E7E /* AwardTests.swift */; };
 		2C7A934526D444C300BC54F7 /* Awards.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C7A934726D444C300BC54F7 /* Awards.json */; };
 		2C7B76692672BA4100973115 /* ProjectHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7B76682672BA4100973115 /* ProjectHeaderView.swift */; };
 		2C7B766B2672BF2800973115 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C7B766A2672BF2800973115 /* Colors.xcassets */; };
@@ -32,6 +33,7 @@
 		2C9F975226A62354000CB5BF /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9F975126A62354000CB5BF /* Award.swift */; };
 		2CAA4A2B26910A710049D61A /* SelectSomthingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAA4A2A26910A710049D61A /* SelectSomthingView.swift */; };
 		2CB2E11E2693B5CC00F7BB1A /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB2E11D2693B5CC00F7BB1A /* Bundle-Decodable.swift */; };
+		2CB942C526FBA5860082D2B9 /* ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB942C426FBA5860082D2B9 /* ProjectTests.swift */; };
 		2CD6587026715689009CB06D /* Binding-OnChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6586F26715689009CB06D /* Binding-OnChange.swift */; };
 		2CF205BC26FA560F0079C72F /* zts_portfolioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF205BB26FA560F0079C72F /* zts_portfolioTests.swift */; };
 		2CF205C426FA579D0079C72F /* AssetTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF205C326FA579D0079C72F /* AssetTest.swift */; };
@@ -69,6 +71,7 @@
 		2C535CCB265C3E7B00E79C74 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		2C6B355E26D0126800B76AB1 /* AwardsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwardsView.swift; sourceTree = "<group>"; };
 		2C6B356026D0127100B76AB1 /* Color-Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color-Additions.swift"; sourceTree = "<group>"; };
+		2C74835326FBAF1500749E7E /* AwardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardTests.swift; sourceTree = "<group>"; };
 		2C7A934826D444C600BC54F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/Awards.json; sourceTree = "<group>"; };
 		2C7A934926D444C700BC54F7 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = pl; path = pl.lproj/Awards.json; sourceTree = "<group>"; };
 		2C7B76682672BA4100973115 /* ProjectHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectHeaderView.swift; sourceTree = "<group>"; };
@@ -80,6 +83,7 @@
 		2C9F975126A62354000CB5BF /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
 		2CAA4A2A26910A710049D61A /* SelectSomthingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSomthingView.swift; sourceTree = "<group>"; };
 		2CB2E11D2693B5CC00F7BB1A /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
+		2CB942C426FBA5860082D2B9 /* ProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProjectTests.swift; path = "zts portfolio/Tabs/Home/ProjectTests.swift"; sourceTree = SOURCE_ROOT; };
 		2CD6586F26715689009CB06D /* Binding-OnChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding-OnChange.swift"; sourceTree = "<group>"; };
 		2CF205B926FA560F0079C72F /* zts portfolioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "zts portfolioTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CF205BB26FA560F0079C72F /* zts_portfolioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zts_portfolioTests.swift; sourceTree = "<group>"; };
@@ -236,6 +240,8 @@
 			isa = PBXGroup;
 			children = (
 				2CF205BB26FA560F0079C72F /* zts_portfolioTests.swift */,
+				2CB942C426FBA5860082D2B9 /* ProjectTests.swift */,
+				2C74835326FBAF1500749E7E /* AwardTests.swift */,
 				2CF205C326FA579D0079C72F /* AssetTest.swift */,
 				2CF205BD26FA560F0079C72F /* Info.plist */,
 			);
@@ -397,7 +403,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CF205C426FA579D0079C72F /* AssetTest.swift in Sources */,
+				2C74835426FBAF1500749E7E /* AwardTests.swift in Sources */,
 				2CF205BC26FA560F0079C72F /* zts_portfolioTests.swift in Sources */,
+				2CB942C526FBA5860082D2B9 /* ProjectTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
