@@ -38,6 +38,7 @@
 		2CB90AFF270398D300E90B16 /* DecodableDictionary.json in Resources */ = {isa = PBXBuildFile; fileRef = 2CB90AFE270398D300E90B16 /* DecodableDictionary.json */; };
 		2CB90B012703992B00E90B16 /* DecodableString.json in Resources */ = {isa = PBXBuildFile; fileRef = 2CB90B002703992B00E90B16 /* DecodableString.json */; };
 		2CB942C526FBA5860082D2B9 /* ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB942C426FBA5860082D2B9 /* ProjectTests.swift */; };
+		2CC0D9CA2704E357004DE0B6 /* PerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC0D9C92704E357004DE0B6 /* PerformanceTests.swift */; };
 		2CD6587026715689009CB06D /* Binding-OnChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6586F26715689009CB06D /* Binding-OnChange.swift */; };
 		2CF205BC26FA560F0079C72F /* zts_portfolioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF205BB26FA560F0079C72F /* zts_portfolioTests.swift */; };
 		2CF205C426FA579D0079C72F /* AssetTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF205C326FA579D0079C72F /* AssetTest.swift */; };
@@ -92,6 +93,7 @@
 		2CB90AFE270398D300E90B16 /* DecodableDictionary.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DecodableDictionary.json; sourceTree = "<group>"; };
 		2CB90B002703992B00E90B16 /* DecodableString.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DecodableString.json; sourceTree = "<group>"; };
 		2CB942C426FBA5860082D2B9 /* ProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProjectTests.swift; path = "zts portfolio/Tabs/Home/ProjectTests.swift"; sourceTree = SOURCE_ROOT; };
+		2CC0D9C92704E357004DE0B6 /* PerformanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceTests.swift; sourceTree = "<group>"; };
 		2CD6586F26715689009CB06D /* Binding-OnChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding-OnChange.swift"; sourceTree = "<group>"; };
 		2CF205B926FA560F0079C72F /* zts portfolioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "zts portfolioTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CF205BB26FA560F0079C72F /* zts_portfolioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zts_portfolioTests.swift; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 				2CF205C326FA579D0079C72F /* AssetTest.swift */,
 				2CB90AFB2703958300E90B16 /* ExtensionTests.swift */,
 				2CF205BD26FA560F0079C72F /* Info.plist */,
+				2CC0D9C92704E357004DE0B6 /* PerformanceTests.swift */,
 			);
 			path = "zts portfolioTests";
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CC0D9CA2704E357004DE0B6 /* PerformanceTests.swift in Sources */,
 				2C117D99270313B1009E2BBB /* TestPreformanceExample.swift in Sources */,
 				2CF205C426FA579D0079C72F /* AssetTest.swift in Sources */,
 				2C74835426FBAF1500749E7E /* AwardTests.swift in Sources */,
