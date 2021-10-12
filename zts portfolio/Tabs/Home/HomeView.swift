@@ -10,37 +10,15 @@ import SwiftUI
 
 struct HomeView: View {
     static let tag: String? = "Home"
-    let items: FetchRequest<Item>
-
-    @FetchRequest(
-        entity: Project.entity(),
-        sortDescriptors: [NSSortDescriptor(keyPath: \Project.title, ascending: true)],
-        predicate: NSPredicate(format: "closed = false")
-    ) var projects: FetchedResults<Project>
-
-    @EnvironmentObject var dataController: DataController
-
-    init() {
-// Construct a fetch request to show the 10 highest-priority,
-// incomplete items from open projects.
-        let request: NSFetchRequest<Item> = Item.fetchRequest()
-
-        let completedPredicate = NSPredicate(format: "complete = false")
-        let openPredicate = NSPredicate(format: "project.closed = false")
-        let compoundPredicate = NSCompoundPredicate(type: .and, subpredicates: [completedPredicate, openPredicate])
-
-        request.predicate = compoundPredicate
-
-        request.sortDescriptors = [
-            NSSortDescriptor(keyPath: \Item.priority, ascending: false)
-        ]
-
-        request.fetchLimit = 10
-        items = FetchRequest(fetchRequest: request)
-    }
+    @StateObject var viewModel: ViewModel
 
     var projectRows: [GridItem] {
         [GridItem(.fixed(100))]
+    }
+
+    init(dataController: DataController) {
+        let viewModel = ViewModel(dataController: dataController)
+        _viewModel = StateObject(wrappedValue: viewModel)
     }
 
     var body: some View {
@@ -49,7 +27,7 @@ struct HomeView: View {
                 VStack(alignment: .leading) {
                     ScrollView(.horizontal, showsIndicators: false) {
                         LazyHGrid(rows: projectRows) {
-                            ForEach(projects, content: ProjectSummaryView.init)
+                            ForEach(viewModel.projects, content: ProjectSummaryView.init)
                         }
                         .padding([.horizontal, .top])
                         .fixedSize(horizontal: false, vertical: true)
@@ -58,12 +36,11 @@ struct HomeView: View {
 
                 VStack(alignment: .leading) {
 
-                    ItemListView(title: "Up next", items: items.wrappedValue.prefix(3))
-                    ItemListView(title: "More to explore", items: items.wrappedValue.dropFirst(3))
+                    ItemListView(title: "Up next", items: viewModel.upNext)
+                    ItemListView(title: "More to explore", items: viewModel.moreToExplore)
 
                             Button {
-                                dataController.deleteAll()
-                                try? dataController.createSampleData()
+                                viewModel.addSampleData()
                             } label: {
                                 ZStack {
                                     RoundedRectangle(cornerRadius: 10)
@@ -86,6 +63,6 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView(dataController: DataController.preview)
     }
 }
