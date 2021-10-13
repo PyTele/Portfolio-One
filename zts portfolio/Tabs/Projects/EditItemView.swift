@@ -46,7 +46,7 @@ struct EditItemView: View {
             }
         }
         .navigationTitle("Edit Item")
-        .onDisappear(perform: dataController.save)
+        .onDisappear(perform: save)
 
     }
 
@@ -57,6 +57,10 @@ struct EditItemView: View {
         item.detail = detail
         item.priority = Int16(priority)
         item.complete = completed
+    }
+
+    func save() {
+        dataController.update(item)
     }
 }
 
