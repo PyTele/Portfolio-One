@@ -8,6 +8,7 @@
 import CoreData
 import CoreSpotlight
 import SwiftUI
+import UserNotifications
 
 /// An environment created specifically to preform intensive, consistent or background data management tasks;
 /// i.e. User award statuses and save data solutions.
@@ -105,7 +106,7 @@ class DataController: ObservableObject {
     }
 
     func delete(_ object: NSManagedObject) {
-        let id = object.objectID.uriRepresentation().absoluteString
+        let id = object.objectID.uriRepresentation().absoluteString // swiftlint:disable:this identifier_name
 
         if object is Item {
             CSSearchableIndex.default().deleteSearchableItems(withIdentifiers: [id])
@@ -115,11 +116,11 @@ class DataController: ObservableObject {
 
         container.viewContext.delete(object)
     }
-    
+
     func delete(_ object: Item) {
-        let id = object.objectID.uriRepresentation().absoluteString
+        let id = object.objectID.uriRepresentation().absoluteString // swiftlint:disable:this identifier_name
         CSSearchableIndex.default().deleteSearchableItems(withIdentifiers: [id])
-        
+
         container.viewContext.delete(object)
     }
 
@@ -190,5 +191,72 @@ class DataController: ObservableObject {
         }
 
         return try? container.viewContext.existingObject(with: id) as? Item
+    }
+
+    func addReminders(for project: Project, completion: @escaping (Bool) -> Void) {
+        let center = UNUserNotificationCenter.current()
+
+        center.getNotificationSettings { settings in
+            switch settings.authorizationStatus {
+            case .notDetermined:
+                self.requestNotifications { success in
+                    if success {
+                        self.placeReminders(for: project, completion: completion)
+                    } else {
+                        DispatchQueue.main.async {
+                            completion(false)
+                        }
+                    }
+                }
+            case .authorized:
+                self.placeReminders(for: project, completion: completion)
+            default:
+                DispatchQueue.main.async {
+                    completion(false)
+                }
+            }
+        }
+    }
+
+    func removeReminders(for project: Project) {
+        let center = UNUserNotificationCenter.current()
+        let id = project.objectID.uriRepresentation().absoluteString // swiftlint:disable:this identifier_name
+
+        center.removePendingNotificationRequests(withIdentifiers: [id])
+    }
+
+    private func requestNotifications(completion: @escaping (Bool) -> Void) {
+        let center = UNUserNotificationCenter.current()
+
+        center.requestAuthorization(options: [.alert, .sound]) { granted, _ in
+            completion(granted)
+        }
+    }
+
+    private func placeReminders(for project: Project, completion: @escaping (Bool) -> Void) {
+        let content = UNMutableNotificationContent()
+
+        content.title = project.projectTitle
+        content.sound = .default
+
+        if let projectDetail = project.detail {
+            content.subtitle = projectDetail
+        }
+
+        let components = Calendar.current.dateComponents([.hour, .minute], from: project.reminderTime ?? Date())
+        let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: true)
+
+        let id = project.objectID.uriRepresentation().absoluteString // swiftlint:disable:this identifier_name
+        let request = UNNotificationRequest(identifier: id, content: content, trigger: trigger)
+
+        UNUserNotificationCenter.current().add(request) { error in
+            DispatchQueue.main.async {
+                if error == nil {
+                    completion(true)
+                } else {
+                    completion(false)
+                }
+            }
+        }
     }
 }
