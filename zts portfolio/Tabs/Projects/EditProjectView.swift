@@ -127,7 +127,7 @@ struct EditProjectView: View {
                 if success == false {
                     project.reminderTime = nil
                     remindMe = false
-                    
+
                     showingNotificationsError = true
                 }
             }

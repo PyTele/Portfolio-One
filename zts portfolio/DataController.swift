@@ -15,13 +15,29 @@ import UserNotifications
 class DataController: ObservableObject {
     /// This is the secure CloudKit storage location, used for user added materials along with encrypted user data.
     let container: NSPersistentCloudKitContainer
+    
+    /// The UserDefaults suite where we're saving user data
+    let defaults: UserDefaults
+    
+    /// Loads and saves whether out premium version has been purchased
+    var fullVersionUnlocked: Bool {
+        get {
+            defaults.bool(forKey: "fullVersionUnlocked")
+        }
+        
+        set {
+            defaults.set(newValue, forKey: "fullVersionUnlocked")
+        }
+    }
 
     /// Initialises  a data controller, either in memory ( for testing and previewing )
     ///  or from permanent storage ( for public Alpha/Beta/Release ).
     ///
     ///  This defaults to permanents storage when available.
     /// - Parameter inMemory: Whether to store this data in temporary or permanent storage
-    init(inMemory: Bool = false) {
+    /// - Parameter defaults: The UserDefaults suite where user data should be stored.
+    init(inMemory: Bool = false, defaults: UserDefaults = .standard) {
+        self.defaults = defaults
         container = NSPersistentCloudKitContainer(name: "Main", managedObjectModel: Self.model)
 
 // For testing and previewing purposes, we create a temporary,

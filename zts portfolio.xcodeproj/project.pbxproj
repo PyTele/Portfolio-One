@@ -35,6 +35,7 @@
 		2C81994D267BF288005A876C /* SequenceSorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C81994C267BF288005A876C /* SequenceSorting.swift */; };
 		2C90BC3226D97297005DA3A9 /* ItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C90BC3126D97297005DA3A9 /* ItemListView.swift */; };
 		2C90BC3426D97397005DA3A9 /* ProjectSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C90BC3326D97397005DA3A9 /* ProjectSummaryView.swift */; };
+		2C995A45271F412F000D294A /* UnlockManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C995A44271F412F000D294A /* UnlockManager.swift */; };
 		2C9F975226A62354000CB5BF /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9F975126A62354000CB5BF /* Award.swift */; };
 		2CAA4A2B26910A710049D61A /* SelectSomethingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAA4A2A26910A710049D61A /* SelectSomethingView.swift */; };
 		2CB2E11E2693B5CC00F7BB1A /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB2E11D2693B5CC00F7BB1A /* Bundle-Decodable.swift */; };
@@ -103,6 +104,8 @@
 		2C81994C267BF288005A876C /* SequenceSorting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceSorting.swift; sourceTree = "<group>"; };
 		2C90BC3126D97297005DA3A9 /* ItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListView.swift; sourceTree = "<group>"; };
 		2C90BC3326D97397005DA3A9 /* ProjectSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSummaryView.swift; sourceTree = "<group>"; };
+		2C995A44271F412F000D294A /* UnlockManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockManager.swift; sourceTree = "<group>"; };
+		2C995A46271F42CB000D294A /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
 		2C9F975126A62354000CB5BF /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
 		2CAA4A2A26910A710049D61A /* SelectSomethingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSomethingView.swift; sourceTree = "<group>"; };
 		2CB2E11D2693B5CC00F7BB1A /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
@@ -178,8 +181,10 @@
 			isa = PBXGroup;
 			children = (
 				2C3470B8265AE9D6001B12BB /* zts_portfolioApp.swift */,
-				2C535CCB265C3E7B00E79C74 /* DataController.swift */,
 				2C3470BA265AE9D6001B12BB /* ContentView.swift */,
+				2C535CCB265C3E7B00E79C74 /* DataController.swift */,
+				2C995A44271F412F000D294A /* UnlockManager.swift */,
+				2C995A46271F42CB000D294A /* Configuration.storekit */,
 				2C4F9EBB26F91462003671E3 /* Configuration */,
 				2C4F9EBC26F91846003671E3 /* Tabs */,
 				2C4F9EB826F91429003671E3 /* Extension */,
@@ -474,6 +479,7 @@
 				2C6B355F26D0126900B76AB1 /* AwardsView.swift in Sources */,
 				2C7B76692672BA4100973115 /* ProjectHeaderView.swift in Sources */,
 				2C3916F12714B9D000422CE0 /* HomeViewModel.swift in Sources */,
+				2C995A45271F412F000D294A /* UnlockManager.swift in Sources */,
 				2C535CCA265C3C0100E79C74 /* Main.xcdatamodeld in Sources */,
 				2C6B356126D0127100B76AB1 /* Color-Additions.swift in Sources */,
 				2C1953A5266AD89500AEDB93 /* Project-CoreDataHelpers.swift in Sources */,
