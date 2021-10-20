@@ -15,7 +15,7 @@ struct zts_portfolioApp: App { // swiftlint:disable:this type_name
     init() {
         let dataController = DataController()
         let unlockManager = UnlockManager(dataController: dataController)
-        
+
         _dataController = StateObject(wrappedValue: dataController)
         _unlockManager = StateObject(wrappedValue: unlockManager)
     }
@@ -34,6 +34,7 @@ struct zts_portfolioApp: App { // swiftlint:disable:this type_name
                     NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification),
                     perform: save
                 )
+                .onAppear(perform: dataController.appLaunched)
         }
     }
 

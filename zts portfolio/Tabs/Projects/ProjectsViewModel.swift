@@ -17,6 +17,7 @@ extension ProjectsView {
 
         private let projectsController: NSFetchedResultsController<Project>
         @Published var projects = [Project]()
+        @Published var showingUnlockedView = false
 
         init(dataController: DataController, showClosedProjects: Bool) {
             self.dataController = dataController
@@ -45,10 +46,17 @@ extension ProjectsView {
         }
 
         func addProject() {
+            let canCreate = dataController.fullVersionUnlocked || dataController.count(for: Project.fetchRequest()) < 3
+
+            if canCreate {
                 let project = Project(context: dataController.container.viewContext)
                 project.closed = false
                 project.creationDate = Date()
                 dataController.save()
+            } else {
+                showingUnlockedView.toggle()
+            }
+
         }
 
         func addItem(to project: Project) {

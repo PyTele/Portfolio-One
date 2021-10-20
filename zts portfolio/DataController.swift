@@ -7,6 +7,7 @@
 
 import CoreData
 import CoreSpotlight
+import StoreKit
 import SwiftUI
 import UserNotifications
 
@@ -15,16 +16,16 @@ import UserNotifications
 class DataController: ObservableObject {
     /// This is the secure CloudKit storage location, used for user added materials along with encrypted user data.
     let container: NSPersistentCloudKitContainer
-    
+
     /// The UserDefaults suite where we're saving user data
     let defaults: UserDefaults
-    
+
     /// Loads and saves whether out premium version has been purchased
     var fullVersionUnlocked: Bool {
         get {
             defaults.bool(forKey: "fullVersionUnlocked")
         }
-        
+
         set {
             defaults.set(newValue, forKey: "fullVersionUnlocked")
         }
@@ -273,6 +274,16 @@ class DataController: ObservableObject {
                     completion(false)
                 }
             }
+        }
+    }
+    
+    func appLaunched() {
+        guard count(for: Project.fetchRequest()) >= 5 else { return }
+        let allScenes = UIApplication.shared.connectedScenes
+        let scene = allScenes.first { $0.activationState == .foregroundActive }
+        
+        if let windowScene = scene as? UIWindowScene {
+            SKStoreReviewController.requestReview(in: windowScene)
         }
     }
 }

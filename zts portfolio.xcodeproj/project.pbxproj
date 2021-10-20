@@ -36,6 +36,11 @@
 		2C90BC3226D97297005DA3A9 /* ItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C90BC3126D97297005DA3A9 /* ItemListView.swift */; };
 		2C90BC3426D97397005DA3A9 /* ProjectSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C90BC3326D97397005DA3A9 /* ProjectSummaryView.swift */; };
 		2C995A45271F412F000D294A /* UnlockManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C995A44271F412F000D294A /* UnlockManager.swift */; };
+		2C9EDE0A27208E9900757F87 /* SKProduct-LocalisedPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EDE0927208E9900757F87 /* SKProduct-LocalisedPrice.swift */; };
+		2C9EDE0C27208F6100757F87 /* PurchaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EDE0B27208F6100757F87 /* PurchaseButton.swift */; };
+		2C9EDE0E272090B100757F87 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EDE0D272090B100757F87 /* ProductView.swift */; };
+		2C9EDE10272092FC00757F87 /* UnlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EDE0F272092FC00757F87 /* UnlockView.swift */; };
+		2C9EDE1327209E0900757F87 /* ProjectSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EDE1227209E0900757F87 /* ProjectSearch.swift */; };
 		2C9F975226A62354000CB5BF /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9F975126A62354000CB5BF /* Award.swift */; };
 		2CAA4A2B26910A710049D61A /* SelectSomethingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAA4A2A26910A710049D61A /* SelectSomethingView.swift */; };
 		2CB2E11E2693B5CC00F7BB1A /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB2E11D2693B5CC00F7BB1A /* Bundle-Decodable.swift */; };
@@ -106,6 +111,11 @@
 		2C90BC3326D97397005DA3A9 /* ProjectSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSummaryView.swift; sourceTree = "<group>"; };
 		2C995A44271F412F000D294A /* UnlockManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockManager.swift; sourceTree = "<group>"; };
 		2C995A46271F42CB000D294A /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
+		2C9EDE0927208E9900757F87 /* SKProduct-LocalisedPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKProduct-LocalisedPrice.swift"; sourceTree = "<group>"; };
+		2C9EDE0B27208F6100757F87 /* PurchaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseButton.swift; sourceTree = "<group>"; };
+		2C9EDE0D272090B100757F87 /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
+		2C9EDE0F272092FC00757F87 /* UnlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockView.swift; sourceTree = "<group>"; };
+		2C9EDE1227209E0900757F87 /* ProjectSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSearch.swift; sourceTree = "<group>"; };
 		2C9F975126A62354000CB5BF /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
 		2CAA4A2A26910A710049D61A /* SelectSomethingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSomethingView.swift; sourceTree = "<group>"; };
 		2CB2E11D2693B5CC00F7BB1A /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
@@ -183,15 +193,15 @@
 				2C3470B8265AE9D6001B12BB /* zts_portfolioApp.swift */,
 				2C3470BA265AE9D6001B12BB /* ContentView.swift */,
 				2C535CCB265C3E7B00E79C74 /* DataController.swift */,
-				2C995A44271F412F000D294A /* UnlockManager.swift */,
-				2C995A46271F42CB000D294A /* Configuration.storekit */,
+				2C9EDE11272098BD00757F87 /* Unlock */,
 				2C4F9EBB26F91462003671E3 /* Configuration */,
 				2C4F9EBC26F91846003671E3 /* Tabs */,
 				2C4F9EB826F91429003671E3 /* Extension */,
 				2C1ECD8826D44242006F2CC6 /* Localisations */,
+				2C3470BE265AE9D7001B12BB /* Preview Content */,
 				2C3470BC265AE9D7001B12BB /* Assets.xcassets */,
 				2C7B766A2672BF2800973115 /* Colors.xcassets */,
-				2C3470BE265AE9D7001B12BB /* Preview Content */,
+				2C9EDE1227209E0900757F87 /* ProjectSearch.swift */,
 			);
 			path = "zts portfolio";
 			sourceTree = "<group>";
@@ -218,6 +228,7 @@
 			children = (
 				2C4F9EC126F919D2003671E3 /* Models */,
 				2C81994C267BF288005A876C /* SequenceSorting.swift */,
+				2C9EDE0927208E9900757F87 /* SKProduct-LocalisedPrice.swift */,
 				2CD6586F26715689009CB06D /* Binding-OnChange.swift */,
 				2CB2E11D2693B5CC00F7BB1A /* Bundle-Decodable.swift */,
 				2C6B356026D0127100B76AB1 /* Color-Additions.swift */,
@@ -231,6 +242,7 @@
 				2C0DFB3D267528BA0020E703 /* zts portfolio.entitlements */,
 				2C535CC8265C3C0100E79C74 /* Main.xcdatamodeld */,
 				2C3470C1265AE9D7001B12BB /* Info.plist */,
+				2C995A46271F42CB000D294A /* Configuration.storekit */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -288,6 +300,17 @@
 				2C1953A4266AD89500AEDB93 /* Project-CoreDataHelpers.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		2C9EDE11272098BD00757F87 /* Unlock */ = {
+			isa = PBXGroup;
+			children = (
+				2C995A44271F412F000D294A /* UnlockManager.swift */,
+				2C9EDE0D272090B100757F87 /* ProductView.swift */,
+				2C9EDE0F272092FC00757F87 /* UnlockView.swift */,
+				2C9EDE0B27208F6100757F87 /* PurchaseButton.swift */,
+			);
+			path = Unlock;
 			sourceTree = "<group>";
 		};
 		2CB90AFD2703989B00E90B16 /* Fixtures */ = {
@@ -475,7 +498,9 @@
 			files = (
 				2CFD20E926682FE3009E68DF /* ProjectsView.swift in Sources */,
 				2C90BC3426D97397005DA3A9 /* ProjectSummaryView.swift in Sources */,
+				2C9EDE0C27208F6100757F87 /* PurchaseButton.swift in Sources */,
 				2CAA4A2B26910A710049D61A /* SelectSomethingView.swift in Sources */,
+				2C9EDE0E272090B100757F87 /* ProductView.swift in Sources */,
 				2C6B355F26D0126900B76AB1 /* AwardsView.swift in Sources */,
 				2C7B76692672BA4100973115 /* ProjectHeaderView.swift in Sources */,
 				2C3916F12714B9D000422CE0 /* HomeViewModel.swift in Sources */,
@@ -485,7 +510,9 @@
 				2C1953A5266AD89500AEDB93 /* Project-CoreDataHelpers.swift in Sources */,
 				2C7B766D2673DF8E00973115 /* EditProjectView.swift in Sources */,
 				2C535CCC265C3E7B00E79C74 /* DataController.swift in Sources */,
+				2C9EDE0A27208E9900757F87 /* SKProduct-LocalisedPrice.swift in Sources */,
 				2C9F975226A62354000CB5BF /* Award.swift in Sources */,
+				2C9EDE10272092FC00757F87 /* UnlockView.swift in Sources */,
 				2C3D72C12670212900001AFB /* ItemRowView.swift in Sources */,
 				2C3470BB265AE9D6001B12BB /* ContentView.swift in Sources */,
 				2CD6587026715689009CB06D /* Binding-OnChange.swift in Sources */,
@@ -496,6 +523,7 @@
 				2C3470B9265AE9D6001B12BB /* zts_portfolioApp.swift in Sources */,
 				2CD022592714C39B0026E1CF /* ItemRowViewModel.swift in Sources */,
 				2C3D72BF2670180700001AFB /* EditItemView.swift in Sources */,
+				2C9EDE1327209E0900757F87 /* ProjectSearch.swift in Sources */,
 				2C2CBFC8270E264B00895B1A /* ProjectsViewModel.swift in Sources */,
 				2C068F0126D018ED000A684D /* HomeView.swift in Sources */,
 			);
