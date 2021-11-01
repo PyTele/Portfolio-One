@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct zts_portfolioApp: App { // swiftlint:disable:this type_name
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     @StateObject var dataController: DataController
     @StateObject var unlockManager: UnlockManager
 

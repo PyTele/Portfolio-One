@@ -49,6 +49,8 @@
 		2CB90B012703992B00E90B16 /* DecodableString.json in Resources */ = {isa = PBXBuildFile; fileRef = 2CB90B002703992B00E90B16 /* DecodableString.json */; };
 		2CB942C526FBA5860082D2B9 /* ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB942C426FBA5860082D2B9 /* ProjectTests.swift */; };
 		2CC0D9CA2704E357004DE0B6 /* PerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC0D9C92704E357004DE0B6 /* PerformanceTests.swift */; };
+		2CC578D62730769900977777 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC578D52730769900977777 /* SceneDelegate.swift */; };
+		2CC578D82730773400977777 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC578D72730773400977777 /* AppDelegate.swift */; };
 		2CD022592714C39B0026E1CF /* ItemRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD022582714C39B0026E1CF /* ItemRowViewModel.swift */; };
 		2CD6587026715689009CB06D /* Binding-OnChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6586F26715689009CB06D /* Binding-OnChange.swift */; };
 		2CF205BC26FA560F0079C72F /* zts_portfolioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF205BB26FA560F0079C72F /* zts_portfolioTests.swift */; };
@@ -124,6 +126,8 @@
 		2CB90B002703992B00E90B16 /* DecodableString.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DecodableString.json; sourceTree = "<group>"; };
 		2CB942C426FBA5860082D2B9 /* ProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProjectTests.swift; path = "zts portfolio/Tabs/Home/ProjectTests.swift"; sourceTree = SOURCE_ROOT; };
 		2CC0D9C92704E357004DE0B6 /* PerformanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceTests.swift; sourceTree = "<group>"; };
+		2CC578D52730769900977777 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2CC578D72730773400977777 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CD022582714C39B0026E1CF /* ItemRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRowViewModel.swift; sourceTree = "<group>"; };
 		2CD6586F26715689009CB06D /* Binding-OnChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding-OnChange.swift"; sourceTree = "<group>"; };
 		2CF205B926FA560F0079C72F /* zts portfolioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "zts portfolioTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -202,6 +206,8 @@
 				2C3470BC265AE9D7001B12BB /* Assets.xcassets */,
 				2C7B766A2672BF2800973115 /* Colors.xcassets */,
 				2C9EDE1227209E0900757F87 /* ProjectSearch.swift */,
+				2CC578D72730773400977777 /* AppDelegate.swift */,
+				2CC578D52730769900977777 /* SceneDelegate.swift */,
 			);
 			path = "zts portfolio";
 			sourceTree = "<group>";
@@ -498,11 +504,13 @@
 			files = (
 				2CFD20E926682FE3009E68DF /* ProjectsView.swift in Sources */,
 				2C90BC3426D97397005DA3A9 /* ProjectSummaryView.swift in Sources */,
+				2CC578D62730769900977777 /* SceneDelegate.swift in Sources */,
 				2C9EDE0C27208F6100757F87 /* PurchaseButton.swift in Sources */,
 				2CAA4A2B26910A710049D61A /* SelectSomethingView.swift in Sources */,
 				2C9EDE0E272090B100757F87 /* ProductView.swift in Sources */,
 				2C6B355F26D0126900B76AB1 /* AwardsView.swift in Sources */,
 				2C7B76692672BA4100973115 /* ProjectHeaderView.swift in Sources */,
+				2CC578D82730773400977777 /* AppDelegate.swift in Sources */,
 				2C3916F12714B9D000422CE0 /* HomeViewModel.swift in Sources */,
 				2C995A45271F412F000D294A /* UnlockManager.swift in Sources */,
 				2C535CCA265C3C0100E79C74 /* Main.xcdatamodeld in Sources */,
