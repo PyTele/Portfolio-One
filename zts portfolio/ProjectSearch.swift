@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ProjectSearch: View {
     @State private var searchText = ""
-    
+
     @State var searchResults = [CSSearchableItem]()
     @State var searchQuery: CSSearchQuery?
 
@@ -20,7 +20,7 @@ struct ProjectSearch: View {
 
             TextField("Search Spotlight", text: $searchText.onChange(search))
                 .textFieldStyle(RoundedBorderTextFieldStyle())
-            
+
             List(searchResults, id: \.uniqueIdentifier) { item in
                 Text(item.attributeSet.title ?? "Unknown title")
             }
