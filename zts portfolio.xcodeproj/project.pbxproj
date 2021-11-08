@@ -66,6 +66,14 @@
 		2CF205BC26FA560F0079C72F /* zts_portfolioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF205BB26FA560F0079C72F /* zts_portfolioTests.swift */; };
 		2CF205C426FA579D0079C72F /* AssetTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF205C326FA579D0079C72F /* AssetTest.swift */; };
 		2CFD20E926682FE3009E68DF /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFD20E826682FE3009E68DF /* ProjectsView.swift */; };
+		2CFFE04F2739A41F00ADBF29 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C1ECD8226D441DF006F2CC6 /* Localizable.strings */; };
+		2CFFE0502739A53400ADBF29 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C7B766A2672BF2800973115 /* Colors.xcassets */; };
+		2CFFE0512739A55500ADBF29 /* Project-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1953A4266AD89500AEDB93 /* Project-CoreDataHelpers.swift */; };
+		2CFFE0522739A55F00ADBF29 /* SequenceSorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C81994C267BF288005A876C /* SequenceSorting.swift */; };
+		2CFFE0542739AF9A00ADBF29 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFE0532739AF9A00ADBF29 /* DataProvider.swift */; };
+		2CFFE0562739AFF500ADBF29 /* SimpleWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFE0552739AFF500ADBF29 /* SimpleWidget.swift */; };
+		2CFFE0582739B04F00ADBF29 /* ComplexWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFE0572739B04F00ADBF29 /* ComplexWidget.swift */; };
+		2CFFE05A2739B17400ADBF29 /* DataController-StoreKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFFE0592739B17400ADBF29 /* DataController-StoreKit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -175,6 +183,10 @@
 		2CF205BD26FA560F0079C72F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CF205C326FA579D0079C72F /* AssetTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetTest.swift; sourceTree = "<group>"; };
 		2CFD20E826682FE3009E68DF /* ProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
+		2CFFE0532739AF9A00ADBF29 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		2CFFE0552739AFF500ADBF29 /* SimpleWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleWidget.swift; sourceTree = "<group>"; };
+		2CFFE0572739B04F00ADBF29 /* ComplexWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexWidget.swift; sourceTree = "<group>"; };
+		2CFFE0592739B17400ADBF29 /* DataController-StoreKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataController-StoreKit.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +262,7 @@
 				2C3470B8265AE9D6001B12BB /* zts_portfolioApp.swift */,
 				2C3470BA265AE9D6001B12BB /* ContentView.swift */,
 				2C535CCB265C3E7B00E79C74 /* DataController.swift */,
+				2CFFE0592739B17400ADBF29 /* DataController-StoreKit.swift */,
 				2CBEEF4D273308CF00AE8B15 /* DataController-reminders.swift */,
 				2CBEEF4F2733098D00AE8B15 /* DataController-Awards.swift */,
 				2C9EDE11272098BD00757F87 /* Unlock */,
@@ -396,6 +409,9 @@
 			isa = PBXGroup;
 			children = (
 				2CBEEF3C2733069C00AE8B15 /* PortfolioWidget.swift */,
+				2CFFE0552739AFF500ADBF29 /* SimpleWidget.swift */,
+				2CFFE0572739B04F00ADBF29 /* ComplexWidget.swift */,
+				2CFFE0532739AF9A00ADBF29 /* DataProvider.swift */,
 				2CBEEF3E2733069E00AE8B15 /* Assets.xcassets */,
 				2CBEEF402733069E00AE8B15 /* Info.plist */,
 			);
@@ -566,7 +582,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CFFE0502739A53400ADBF29 /* Colors.xcassets in Resources */,
 				2CBEEF3F2733069E00AE8B15 /* Assets.xcassets in Resources */,
+				2CFFE04F2739A41F00ADBF29 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,6 +644,7 @@
 				2C535CCC265C3E7B00E79C74 /* DataController.swift in Sources */,
 				2C9EDE0A27208E9900757F87 /* SKProduct-LocalisedPrice.swift in Sources */,
 				2C9F975226A62354000CB5BF /* Award.swift in Sources */,
+				2CFFE05A2739B17400ADBF29 /* DataController-StoreKit.swift in Sources */,
 				2C9EDE10272092FC00757F87 /* UnlockView.swift in Sources */,
 				2C3D72C12670212900001AFB /* ItemRowView.swift in Sources */,
 				2CBEEF502733098D00AE8B15 /* DataController-Awards.swift in Sources */,
@@ -658,9 +677,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CBEEF49273307EE00AE8B15 /* Items-CoreDataHelpers.swift in Sources */,
+				2CFFE0522739A55F00ADBF29 /* SequenceSorting.swift in Sources */,
 				2CBEEF4A2733081400AE8B15 /* DataController.swift in Sources */,
+				2CFFE0562739AFF500ADBF29 /* SimpleWidget.swift in Sources */,
+				2CFFE0582739B04F00ADBF29 /* ComplexWidget.swift in Sources */,
+				2CFFE0542739AF9A00ADBF29 /* DataProvider.swift in Sources */,
 				2CBEEF48273307D900AE8B15 /* Main.xcdatamodeld in Sources */,
 				2CBEEF3D2733069C00AE8B15 /* PortfolioWidget.swift in Sources */,
+				2CFFE0512739A55500ADBF29 /* Project-CoreDataHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
