@@ -15,4 +15,3 @@ struct PortfolioWidgets: WidgetBundle {
         ComplexPortfolioWidget()
     }
 }
-

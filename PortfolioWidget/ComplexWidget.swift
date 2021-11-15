@@ -8,26 +8,26 @@
 import SwiftUI
 import WidgetKit
 
-struct PortfolioWidgetMultipleEntryView : View {
+struct PortfolioWidgetMultipleEntryView: View {
     @Environment(\.widgetFamily) var widgetFamily
     @Environment(\.sizeCategory) var sizeCategory
-    
+
     var entry: Provider.Entry
-    
+
     var items: ArraySlice<Item> {
         let itemCount: Int
-        
+
         switch widgetFamily {
         case .systemSmall:
             itemCount = 1
-            
+
         case .systemMedium:
             if sizeCategory < .extraLarge {
                 itemCount = 3
             } else {
                 itemCount = 2
             }
-            
+
         case .systemLarge:
             if sizeCategory < .extraExtraLarge {
                 itemCount = 5
@@ -37,7 +37,7 @@ struct PortfolioWidgetMultipleEntryView : View {
 
         case .systemExtraLarge:
             itemCount = 5
-            
+
         @unknown default:
             if sizeCategory < .extraLarge {
                 itemCount = 3
@@ -47,7 +47,7 @@ struct PortfolioWidgetMultipleEntryView : View {
         }
         return entry.items.prefix(itemCount)
     }
-    
+
     var body: some View {
             VStack(spacing: 5) {
                 ForEach(items) { item in

@@ -47,11 +47,12 @@ struct HomeView: View {
 
                 VStack(alignment: .leading) {
 
-                    ItemListView(title: "Up next", items: viewModel.upNext)
-                    ItemListView(title: "More to explore", items: viewModel.moreToExplore)
+                    ItemListView(title: "Up next", items: $viewModel.upNext)
+                    ItemListView(title: "More to explore", items: $viewModel.moreToExplore)
 
                             Button {
-                                viewModel.addSampleData()
+//                                viewModel.addSampleData()
+                                viewModel.dataController.deleteAll()
                             } label: {
                                 ZStack {
                                     RoundedRectangle(cornerRadius: 10)

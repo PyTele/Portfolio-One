@@ -8,14 +8,13 @@
 import SwiftUI
 import WidgetKit
 
-struct PortfolioWidgetEntryView : View {
+struct PortfolioWidgetEntryView: View {
     var entry: Provider.Entry
 
     var body: some View {
         VStack {
             Text("Up Next…")
                 .font(.title)
-            
             if let item = entry.items.first {
                 Text(item.itemTitle)
             } else {

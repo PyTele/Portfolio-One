@@ -10,7 +10,7 @@ import WidgetKit
 
 struct Provider: TimelineProvider {
     typealias Entry = SimpleEntry
-    
+
     func placeholder(in context: Context) -> SimpleEntry {
         SimpleEntry(date: Date(), items: [Item.example])
     }
@@ -25,7 +25,7 @@ struct Provider: TimelineProvider {
         let timeline = Timeline(entries: [entry], policy: .never)
         completion(timeline)
     }
-    
+
     func loadItems() -> [Item] {
         let dataController = DataController()
         let itemRequest = dataController.fetchRequestForTopItems(count: 5)
