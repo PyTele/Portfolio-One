@@ -51,8 +51,8 @@ struct HomeView: View {
                     ItemListView(title: "More to explore", items: $viewModel.moreToExplore)
 
                             Button {
-//                                viewModel.addSampleData()
-                                viewModel.dataController.deleteAll()
+                                viewModel.addSampleData()
+                                // viewModel.dataController.deleteAll()
                             } label: {
                                 ZStack {
                                     RoundedRectangle(cornerRadius: 10)
