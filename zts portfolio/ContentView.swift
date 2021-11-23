@@ -42,7 +42,7 @@ struct ContentView: View {
                     Image(systemName: "rosette")
                     Text("Awards")
                 }
-            
+
             SharedProjectsView()
                 .tag(SharedProjectsView.tag)
                 .tabItem {

@@ -32,6 +32,7 @@
 		2C7B76692672BA4100973115 /* ProjectHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7B76682672BA4100973115 /* ProjectHeaderView.swift */; };
 		2C7B766B2672BF2800973115 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C7B766A2672BF2800973115 /* Colors.xcassets */; };
 		2C7B766D2673DF8E00973115 /* EditProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7B766C2673DF8E00973115 /* EditProjectView.swift */; };
+		2C7BCA8E274D768200F6D1FE /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7BCA8D274D768200F6D1FE /* ChatMessage.swift */; };
 		2C81994D267BF288005A876C /* SequenceSorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C81994C267BF288005A876C /* SequenceSorting.swift */; };
 		2C90BC3226D97297005DA3A9 /* ItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C90BC3126D97297005DA3A9 /* ItemListView.swift */; };
 		2C90BC3426D97397005DA3A9 /* ProjectSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C90BC3326D97397005DA3A9 /* ProjectSummaryView.swift */; };
@@ -153,6 +154,7 @@
 		2C7B76682672BA4100973115 /* ProjectHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectHeaderView.swift; sourceTree = "<group>"; };
 		2C7B766A2672BF2800973115 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		2C7B766C2673DF8E00973115 /* EditProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProjectView.swift; sourceTree = "<group>"; };
+		2C7BCA8D274D768200F6D1FE /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
 		2C81994C267BF288005A876C /* SequenceSorting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceSorting.swift; sourceTree = "<group>"; };
 		2C90BC3126D97297005DA3A9 /* ItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListView.swift; sourceTree = "<group>"; };
 		2C90BC3326D97397005DA3A9 /* ProjectSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSummaryView.swift; sourceTree = "<group>"; };
@@ -440,6 +442,7 @@
 				2CD5335D2745940C003F4ADD /* SharedProject.swift */,
 				2CD5335F27459509003F4ADD /* SharedItem.swift */,
 				2CD53361274595BC003F4ADD /* LoadStates.swift */,
+				2C7BCA8D274D768200F6D1FE /* ChatMessage.swift */,
 			);
 			path = Community;
 			sourceTree = "<group>";
@@ -672,6 +675,7 @@
 				2C535CCC265C3E7B00E79C74 /* DataController.swift in Sources */,
 				2C9EDE0A27208E9900757F87 /* SKProduct-LocalisedPrice.swift in Sources */,
 				2C9F975226A62354000CB5BF /* Award.swift in Sources */,
+				2C7BCA8E274D768200F6D1FE /* ChatMessage.swift in Sources */,
 				2CFFE05A2739B17400ADBF29 /* DataController-StoreKit.swift in Sources */,
 				2C9EDE10272092FC00757F87 /* UnlockView.swift in Sources */,
 				2C3D72C12670212900001AFB /* ItemRowView.swift in Sources */,

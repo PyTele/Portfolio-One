@@ -8,7 +8,7 @@
 import Foundation
 
 struct SharedItem: Identifiable {
-    let id: String
+    let id: String // swiftlint:disable:this identifier_name
     let title: String
     let detail: String
     let complete: Bool

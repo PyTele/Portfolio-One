@@ -26,7 +26,7 @@ struct EditProjectView: View {
     @State private var reminderTime: Date
 
     @State private var engine = try? CHHapticEngine()
-    
+
     @AppStorage("username") var username: String?
     @State private var showingSignIn = false
 
@@ -122,7 +122,7 @@ struct EditProjectView: View {
                 secondaryButton: .cancel()
             )
         }
-        .actionSheet(isPresented: $showingSignIn, content: SignInView.init())
+        .sheet(isPresented: $showingSignIn, content: SignInView.init)
     }
 
     func update() {
@@ -228,7 +228,7 @@ struct EditProjectView: View {
             UIApplication.shared.open(settingURL)
         }
     }
-    
+
     func uploadToCloud() {
         if let username = username {
             let records = project.prepareCloudRecords(owner: username)
