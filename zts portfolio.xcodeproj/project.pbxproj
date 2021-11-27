@@ -132,6 +132,7 @@
 		2C1ECD8526D4421F006F2CC6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		2C1ECD8726D44224006F2CC6 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = pl; path = pl.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		2C2CBFC7270E264B00895B1A /* ProjectsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewModel.swift; sourceTree = "<group>"; };
+		2C31A9C127518F2A004FA508 /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
 		2C3470B5265AE9D6001B12BB /* zts portfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "zts portfolio.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C3470B8265AE9D6001B12BB /* zts_portfolioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zts_portfolioApp.swift; sourceTree = "<group>"; };
 		2C3470BA265AE9D6001B12BB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -159,7 +160,6 @@
 		2C90BC3126D97297005DA3A9 /* ItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListView.swift; sourceTree = "<group>"; };
 		2C90BC3326D97397005DA3A9 /* ProjectSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSummaryView.swift; sourceTree = "<group>"; };
 		2C995A44271F412F000D294A /* UnlockManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockManager.swift; sourceTree = "<group>"; };
-		2C995A46271F42CB000D294A /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
 		2C9EDE0927208E9900757F87 /* SKProduct-LocalisedPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKProduct-LocalisedPrice.swift"; sourceTree = "<group>"; };
 		2C9EDE0B27208F6100757F87 /* PurchaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseButton.swift; sourceTree = "<group>"; };
 		2C9EDE0D272090B100757F87 /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
@@ -249,7 +249,6 @@
 		2C3470AC265AE9D6001B12BB = {
 			isa = PBXGroup;
 			children = (
-				2CBEEF5127330A6700AE8B15 /* PortfolioWidgetExtension.entitlements */,
 				2C3470B7265AE9D6001B12BB /* zts portfolio */,
 				2CF205BA26FA560F0079C72F /* zts portfolioTests */,
 				2C443E6C270CDF2F0055DB2A /* zts portfolioUITests */,
@@ -330,9 +329,10 @@
 			isa = PBXGroup;
 			children = (
 				2C0DFB3D267528BA0020E703 /* zts portfolio.entitlements */,
+				2CBEEF5127330A6700AE8B15 /* PortfolioWidgetExtension.entitlements */,
 				2C535CC8265C3C0100E79C74 /* Main.xcdatamodeld */,
 				2C3470C1265AE9D7001B12BB /* Info.plist */,
-				2C995A46271F42CB000D294A /* Configuration.storekit */,
+				2C31A9C127518F2A004FA508 /* Configuration.storekit */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";

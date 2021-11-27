@@ -8,7 +8,7 @@
 import Foundation
 
 struct SharedProject: Identifiable {
-    let id: String
+    let id: String // swiftlint:disable:this identifier_name
     let title: String
     let detail: String
     let owner: String
