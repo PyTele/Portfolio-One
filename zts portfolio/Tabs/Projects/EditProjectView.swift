@@ -35,6 +35,7 @@ struct EditProjectView: View {
     @State private var showingSignIn = false
     
     @State private var cloudStatus = CloudStatus.checking
+    @State private var cloudError: CloudError?
 
     let colorColumns = [
         GridItem(.adaptive(minimum: 44))
@@ -137,6 +138,12 @@ struct EditProjectView: View {
                 message: Text("Do you want to delete this project and all of its data?"), // swiftlint:disable:this line_length
                 primaryButton: .destructive(Text("Delete"), action: delete),
                 secondaryButton: .cancel()
+            )
+        }
+        .alert(item: $cloudError) { error in
+            Alert(
+                title: Text(Image("exclamationmark.triangle.fill")),
+                message: Text(error.message)
             )
         }
         .sheet(isPresented: $showingSignIn, content: SignInView.init)
@@ -253,12 +260,12 @@ struct EditProjectView: View {
             operation.savePolicy = .allKeys
             operation.modifyRecordsCompletionBlock = { _, _, error in
                 if let error = error {
-                    print("Error: \(error.localizedDescription)")
+                    cloudError = error.getCloudKitError()
                 }
-                
+
                 updateCloudStatus()
             }
-            
+
             cloudStatus = .checking
 
             CKContainer.default().publicCloudDatabase.add(operation)
@@ -266,7 +273,7 @@ struct EditProjectView: View {
             showingSignIn = true
         }
     }
-    
+
     func updateCloudStatus() {
         project.checkCloudStatus { exists in
             if exists {
@@ -276,14 +283,14 @@ struct EditProjectView: View {
             }
         }
     }
-    
+
     func removeFromCloud() {
         let name = project.objectID.uriRepresentation().absoluteString
         let id = CKRecord.ID(recordName: name)
         
         let operation = CKModifyRecordsOperation(recordsToSave: nil, recordIDsToDelete: [id])
-        operation.modifyRecordsCompletionBlock = { _, _, _ in
-            updateCloudStatus()
+        operation.modifyRecordsCompletionBlock = { _, _, error in
+            cloudError = error?.getCloudKitError()
         }
         
         cloudStatus = .checking

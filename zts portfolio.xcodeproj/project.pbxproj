@@ -62,6 +62,8 @@
 		2CC0D9CA2704E357004DE0B6 /* PerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC0D9C92704E357004DE0B6 /* PerformanceTests.swift */; };
 		2CC578D62730769900977777 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC578D52730769900977777 /* SceneDelegate.swift */; };
 		2CC578D82730773400977777 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC578D72730773400977777 /* AppDelegate.swift */; };
+		2CC8061627555E6200687751 /* Error-CloudKitMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC8061527555E6200687751 /* Error-CloudKitMessages.swift */; };
+		2CC80618275564F100687751 /* CloudError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC80617275564F100687751 /* CloudError.swift */; };
 		2CCED964274C25B60077C54B /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCED963274C25B60077C54B /* SignInView.swift */; };
 		2CD022592714C39B0026E1CF /* ItemRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD022582714C39B0026E1CF /* ItemRowViewModel.swift */; };
 		2CD5335E2745940C003F4ADD /* SharedProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD5335D2745940C003F4ADD /* SharedProject.swift */; };
@@ -184,6 +186,8 @@
 		2CC0D9C92704E357004DE0B6 /* PerformanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceTests.swift; sourceTree = "<group>"; };
 		2CC578D52730769900977777 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2CC578D72730773400977777 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2CC8061527555E6200687751 /* Error-CloudKitMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error-CloudKitMessages.swift"; sourceTree = "<group>"; };
+		2CC80617275564F100687751 /* CloudError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudError.swift; sourceTree = "<group>"; };
 		2CCED963274C25B60077C54B /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		2CD022582714C39B0026E1CF /* ItemRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRowViewModel.swift; sourceTree = "<group>"; };
 		2CD5335D2745940C003F4ADD /* SharedProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedProject.swift; sourceTree = "<group>"; };
@@ -249,6 +253,7 @@
 		2C3470AC265AE9D6001B12BB = {
 			isa = PBXGroup;
 			children = (
+				2CBEEF5127330A6700AE8B15 /* PortfolioWidgetExtension.entitlements */,
 				2C3470B7265AE9D6001B12BB /* zts portfolio */,
 				2CF205BA26FA560F0079C72F /* zts portfolioTests */,
 				2C443E6C270CDF2F0055DB2A /* zts portfolioUITests */,
@@ -278,10 +283,9 @@
 				2CFFE0592739B17400ADBF29 /* DataController-StoreKit.swift */,
 				2CBEEF4D273308CF00AE8B15 /* DataController-reminders.swift */,
 				2CBEEF4F2733098D00AE8B15 /* DataController-Awards.swift */,
-				2C4F9EBC26F91846003671E3 /* Tabs */,
 				2C4F9EBB26F91462003671E3 /* Configuration */,
+				2C4F9EBC26F91846003671E3 /* Tabs */,
 				2C4F9EB826F91429003671E3 /* Extension */,
-				2CD5336327459629003F4ADD /* Community */,
 				2C9EDE11272098BD00757F87 /* Unlock */,
 				2C1ECD8826D44242006F2CC6 /* Localisations */,
 				2C3470BE265AE9D7001B12BB /* Preview Content */,
@@ -321,6 +325,7 @@
 				2CD6586F26715689009CB06D /* Binding-OnChange.swift */,
 				2CB2E11D2693B5CC00F7BB1A /* Bundle-Decodable.swift */,
 				2C6B356026D0127100B76AB1 /* Color-Additions.swift */,
+				2CC8061527555E6200687751 /* Error-CloudKitMessages.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -329,10 +334,10 @@
 			isa = PBXGroup;
 			children = (
 				2C0DFB3D267528BA0020E703 /* zts portfolio.entitlements */,
-				2CBEEF5127330A6700AE8B15 /* PortfolioWidgetExtension.entitlements */,
 				2C535CC8265C3C0100E79C74 /* Main.xcdatamodeld */,
 				2C3470C1265AE9D7001B12BB /* Info.plist */,
 				2C31A9C127518F2A004FA508 /* Configuration.storekit */,
+				2CC80617275564F100687751 /* CloudError.swift */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -343,6 +348,7 @@
 				2C4F9EBD26F91850003671E3 /* Home */,
 				2C4F9EBF26F91860003671E3 /* Projects */,
 				2C4F9EC026F91869003671E3 /* Awards */,
+				2CD5336327459629003F4ADD /* Community */,
 			);
 			path = Tabs;
 			sourceTree = "<group>";
@@ -674,8 +680,10 @@
 				2C7B766D2673DF8E00973115 /* EditProjectView.swift in Sources */,
 				2C535CCC265C3E7B00E79C74 /* DataController.swift in Sources */,
 				2C9EDE0A27208E9900757F87 /* SKProduct-LocalisedPrice.swift in Sources */,
+				2CC80618275564F100687751 /* CloudError.swift in Sources */,
 				2C9F975226A62354000CB5BF /* Award.swift in Sources */,
 				2C7BCA8E274D768200F6D1FE /* ChatMessage.swift in Sources */,
+				2CC8061627555E6200687751 /* Error-CloudKitMessages.swift in Sources */,
 				2CFFE05A2739B17400ADBF29 /* DataController-StoreKit.swift in Sources */,
 				2C9EDE10272092FC00757F87 /* UnlockView.swift in Sources */,
 				2C3D72C12670212900001AFB /* ItemRowView.swift in Sources */,
